@@ -21,4 +21,8 @@ class Practica {
          })
         resultado(maxSize:500)
     }
+
+    String toString(){
+        return tipoPractica
+    }
 }

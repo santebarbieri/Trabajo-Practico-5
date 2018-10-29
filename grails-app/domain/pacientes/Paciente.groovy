@@ -20,4 +20,8 @@ class Paciente {
         telefono(matches:"[1-9]{3}-[1,-9]{6}")
         email(email: true)
     }
+
+    String toString(){
+        return nombre + " " + apellido
+    }
 }

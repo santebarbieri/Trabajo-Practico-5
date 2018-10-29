@@ -2,10 +2,35 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Welcome to Grails</title>
 </head>
 <body>
-    <content tag="nav">
+    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <!--Lo que esta dentro de este div es para que salga el cuadrdito desplegable cuando lo usamos en celular-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>            
+            </div>
+            <div role="main" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <section class="row colset-2-its">                    
+                    <div id="controllers" role="navigation">                        
+                        <ul class="nav navbar-nav">
+                            <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+                                <li class="controller">
+                                    <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
+                                </li>
+                            </g:each>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </nav>
+    <!--<content tag="nav">
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Application Status <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -52,12 +77,10 @@
     <div id="content" role="main">
         <section class="row colset-2-its">
             <h1>Bienvenido al Hospital San Algo</h1>
-
             <p>Somos el mejor hospital de la provincia</p>
-
             <div id="controllers" role="navigation">
                 <h2>Secciones:</h2>
-                <ul>
+                <ul class="nav navbar-nav">
                     <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
                         <li class="controller">
                             <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
@@ -66,7 +89,6 @@
                 </ul>
             </div>
         </section>
-    </div>
-
+    </div>-->
 </body>
 </html>

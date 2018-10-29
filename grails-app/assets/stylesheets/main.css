@@ -7,6 +7,12 @@ input, select, textarea {
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
 }
+.jumbotron{
+    background: url("doctor_digital_2.png") no-repeat; 
+    background-size: 100% 100%;
+    background-color: #ddd;
+    color:#ddd;
+}
 
 /* BASE LAYOUT */
 

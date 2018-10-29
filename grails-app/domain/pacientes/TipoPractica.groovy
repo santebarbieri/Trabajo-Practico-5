@@ -1,7 +1,7 @@
 package pacientes
 
 class TipoPractica {
-    int codigo
+    String codigo
     String nombre
 
     static constraints = {

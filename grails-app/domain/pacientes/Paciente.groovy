@@ -7,7 +7,7 @@ class Paciente {
     String sexo
     Date fechaNacimiento
     String telefono
-    String mail
+    String email
 
     static hasMany = [consulta: Consulta, practica: Practica] //uno a muchos
 
@@ -18,6 +18,6 @@ class Paciente {
         sexo(inList:['F','M'])
         fechaNacimiento(blank: false)
         telefono(matches:"[1-9]{3}-[1,-9]{6}")
-        mail(email: true)
+        email(email: true)
     }
 }

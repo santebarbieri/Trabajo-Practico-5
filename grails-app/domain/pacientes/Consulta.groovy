@@ -12,7 +12,11 @@ class Consulta {
 
     static constraints = {
         paciente(blank: false)
-        fecha(blank:false)
+         fecha (blank:false, validator:{ 
+            if(it > new Date(System.currentTimeMillis())){
+                return ['fechaIncorrecta']
+            }
+        })
         hora(blank:false)
         motivo(blank:false, maxSize:500)
         diagnostico(blank:false, maxSize:500)
